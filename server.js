@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 
 const apiRoutes = require("./routes/api");
+app.get("/", (req, res) => {
+    res.send("Rate Limiter API is running");
+});
 
 app.use("/api", apiRoutes);
 
